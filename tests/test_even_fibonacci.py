@@ -1,5 +1,4 @@
-import pytest
-from easy import even_fibonacci
+from problems import even_fibonacci
 
 
 def test_result():

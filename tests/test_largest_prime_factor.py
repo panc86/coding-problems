@@ -1,5 +1,4 @@
-import pytest
-from easy import largest_prime_factor
+from problems import largest_prime_factor
 
 
 def test_result():

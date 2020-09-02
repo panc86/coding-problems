@@ -1,5 +1,4 @@
-import pytest
-from easy import multiples_of_3_and_5
+from problems import multiples_of_3_and_5
 
 
 def test_result():
