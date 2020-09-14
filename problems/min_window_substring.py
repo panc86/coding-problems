@@ -17,7 +17,7 @@ from itertools import islice
 from collections import deque, Counter
 
 
-def sliding_window_iter(iterable, size):
+def iter_sliding_window(iterable, size):
     # slide a window over the iterable of size=size
     iterable = iter(iterable)
     window = deque(islice(iterable, size), maxlen=size)
@@ -31,19 +31,19 @@ def sliding_window_iter(iterable, size):
 
 
 def solution(N, K):
-  min_window_size = len(K)
-  while min_window_size <= len(N):
-    for window in sliding_window_iter(list(N), min_window_size):
-      # count only chars of interest (K)
-      tot = 0
-      tmp_K = list(K)
-      for char in window:
-        if char in tmp_K:
-          tot += 1
-          tmp_K.pop(tmp_K.index(char))
-        if tot == len(K):
-          return "".join(window)
-    min_window_size += 1
+    min_window_size = len(K)
+    while min_window_size <= len(N):
+        for window in iter_sliding_window(list(N), min_window_size):
+            # count only chars of interest (K)
+            tot = 0
+            tmp_K = list(K)
+            for char in window:
+                if char in tmp_K:
+                    tot += 1
+                    tmp_K.pop(tmp_K.index(char))
+                if tot == len(K):
+                    return "".join(window)
+        min_window_size += 1
 
 
 # Run via the console
