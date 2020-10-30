@@ -1,8 +1,8 @@
 import unittest
-from problems import even_fibonacci
+from problems import even_fibonacci as func
 
 
-class TestStringMethods(unittest.TestCase):
+class TestEvenFibonacci(unittest.TestCase):
 
-    def test_result(self):
-        self.assertTrue(even_fibonacci.solution() == 4613732)
+    def test_solution(self):
+        self.assertTrue(func.solution() == 4613732)

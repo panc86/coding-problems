@@ -1,8 +1,8 @@
 import unittest
-from problems import multiples_of_3_and_5
+from problems import multiples_of_3_and_5 as func
 
 
-class TestStringMethods(unittest.TestCase):
+class TestMultiplesOf3And5(unittest.TestCase):
 
-    def test_result(self):
-        self.assertTrue(multiples_of_3_and_5.solution(1000) == 233168)
+    def test_solution(self):
+        self.assertTrue(func.solution(1000) == 233168)

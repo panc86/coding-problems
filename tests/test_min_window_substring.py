@@ -1,13 +1,9 @@
 import unittest
-from problems import min_window_substring
+from problems import min_window_substring as func
 
 
-class TestStringMethods(unittest.TestCase):
+class TestMinWindowSubstring(unittest.TestCase):
 
-    def test_result1(self):
-        res = min_window_substring.solution("aaffhkksemckelloe", "fhea")
-        self.assertTrue(res == "affhkkse")
-
-    def test_result2(self):
-        res = min_window_substring.solution("ahffaksfajeeubsne", "jefaa")
-        self.assertTrue(res == "aksfaje")
+    def test_solution(self):
+        self.assertTrue(func.solution("aaffhkksemckelloe", "fhea") == "affhkkse")
+        self.assertTrue(func.solution("ahffaksfajeeubsne", "jefaa") == "aksfaje")
